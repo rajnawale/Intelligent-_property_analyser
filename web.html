@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: #444444;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444444;
+        }
+
+        input[type="number"],
+        select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+        .radio-group label {
+            margin-right: 20px;
+            font-weight: normal;
+            color: #444444;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>House Price Predictor</h1>
+    <form method="POST" action="predict_price">
+        <label for="area">Area (in sq. ft.):</label>
+        <input type="number" id="area" name="area" required>
+
+        <label for="bedroom">Bedroom:</label>
+        <select id="bedroom" name="bedroom">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="bathroom">Bathroom:</label>
+        <select id="bathroom" name="bathroom">
+            <option value="1">1</option>
+            <option value="2">2</option>
+			            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="stories">Stories:</label>
+        <select id="stories" name="stories">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <label>Mainroad:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="mainroad" value="1">Yes</label>
+            <label><input type="radio" name="mainroad" value="0" checked>No</label>
+        </div>
+
+        <label>Guest Room:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="guestroom" value="1">Yes</label>
+            <label><input type="radio" name="guestroom" value="0" checked>No</label>
+        </div>
+
+        <label>Air Conditioning:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="airconditioning" value="1">Yes</label>
+            <label><input type="radio" name="airconditioning" value="0" checked>No</label>
+        </div>
+
+        <label>Hot Water Heating:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="hotwaterheating" value="1">Yes</label>
+            <label><input type="radio" name="hotwaterheating" value="0" checked>No</label>
+        </div>
+
+        <label for="noparking">No. of Parking:</label>
+        <select id="noparking" name="noparking">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="furnishingstatus">Furnishing Status:</label>
+            <select id="furnishingstatus" name="furnishingstatus">
+                <option value="furnished">Furnished</option>
+                <option value="semi-furnished">Semi-Furnished</option>
+				<option value="unfurnished">Unfurnished</option>
+             </select>
+
+
+        <label>Preferred Area:</label>
+       <div class="radio-group">
+          <label><input type="radio" name="preferredarea" value="yes"> Yes</label>
+          <label><input type="radio" name="preferredarea" value="no"> No</label>
+       </div>
+
+
+        <input type="submit" value="Predict Price">
+    </form>
+</body>
+</html>

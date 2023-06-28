@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intelligent Property Analyzer - Login</title>
+	<style>
+		body {
+			background-color: #F2F2F2;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+		}
+
+		.container {
+			margin: 50px auto;
+			padding: 20px;
+			max-width: 500px;
+			background-color: #FFFFFF;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			text-align: center;
+			font-weight: bold;
+			color: #4F4F4F;
+			margin-bottom: 30px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 8px;
+			font-weight: bold;
+			color: #4F4F4F;
+		}
+
+		input[type="text"], input[type="password"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #CFCFCF;
+			background-color: #F9F9F9;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			color: #4F4F4F;
+		}
+
+		input[type="submit"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #3D9BE9;
+			color: #FFFFFF;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #2C77C6;
+		}
+
+		.error {
+			color: #FF0000;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		.signup-link {
+			display: block;
+			margin-top: 20px;
+			text-align: center;
+			color: #4F4F4F;
+			font-size: 14px;
+		}
+
+		.signup-link a {
+			color: #3D9BE9;
+			text-decoration: none;
+			font-weight: bold;
+			transition: color 0.3s ease-in-out;
+		}
+
+		.signup-link a:hover {
+			color: #2C77C6;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Intelligent Property Analyzer</h1>
+		<form action="index.html" method="post">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<input type="submit" value="Log In">
+			<div class="error">Incorrect username or password.</div>
+			<div class="signup-link">Don't have an account? <a href="#">Sign up now</a>.</div>
+		</form>
+	</div>
+</body>
+</html>
